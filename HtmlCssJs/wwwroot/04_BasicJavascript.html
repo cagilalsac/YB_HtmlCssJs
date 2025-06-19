@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Basic Javascript</title>
+    <script>
+        var isim = "Çağıl Alsaç";
+        //alert(isim);
+        console.log(isim);
+
+        topla(10, 7);
+
+        var carpim = carp(5, 6);
+        console.log(carpim);
+
+        function topla(no1, no2) {
+            console.log("Toplam: " + (no1 + no2));
+        }
+
+        function carp(no1, no2) {
+            return no1 * no2;
+        }
+    </script>
+
+    <script>
+        var sayi1 = 1;
+        var sayi2 = 1;
+
+        var sonuc = hangisiBuyuk(sayi1, sayi2);
+        if (sonuc == null) {
+            console.log("Sayılar eşit.");
+        } else {
+            console.log(sonuc + " daha büyük.");
+        }
+
+
+
+        function hangisiBuyuk(no1, no2) {
+            if (no1 > no2) {
+                return no1;
+            } else if (no2 > no1) {
+                return no2;
+            } else {
+                return null;
+            }
+        }
+    </script>
+
+    <script>
+        let kisaltma = "us";
+        switch (kisaltma.toUpperCase()) {
+            case "US":
+                console.log("ABD");
+                break;
+            case "GB":
+                console.log("İngiltere");
+                break;
+            default:
+                console.log("Türkiye");
+                break;
+        }
+    </script>
+
+    <script>
+        var sonuc;
+        sonuc = 'SONUÇ: ';
+        for (var i = 1; i <= 10; i++) {
+            sonuc += i + ", ";
+        }
+        sonuc = sonuc.substr(0, sonuc.length - 2); // SONUC: 1, 2
+        console.log(sonuc);
+
+        sonuc = "";
+        var j = 1;
+        while (j <= 10) {
+            sonuc += j + ", ";
+            j++;
+        }
+
+        sonuc = sonuc.substr(0, sonuc.length - 2);
+        console.log("while: " + sonuc);
+
+        sonuc = "";
+        var k = 1;
+        do {
+            sonuc += k + ", ";
+            k++;
+        } while (k <= 10);
+
+        sonuc = sonuc.substr(0, sonuc.length - 2);
+        console.log("do while: " + sonuc);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
