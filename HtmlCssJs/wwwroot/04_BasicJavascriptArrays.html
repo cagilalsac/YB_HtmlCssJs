@@ -1,0 +1,77 @@
+﻿<html>
+<head>
+    <title>Basic Javascript Arrays</title>
+    <script src="/04_BasicJavascriptArrays.js"></script>
+    <style>
+        /* 1. yöntem: */
+        /*#oyunListesi {
+            border-style:groove;
+            border-width:7px;
+            border-radius:10px;
+            font-family:'Comic Sans MS';
+            font-size:14px;*/
+            /*text-align:center;*/
+            /*padding:40px 30px 20px 10px;
+        }*/
+
+        /* 2. yöntem: */
+        .oyunListesi {
+            border-style: groove;
+            border-width: 7px;
+            border-radius: 10px;
+            font-family: 'Comic Sans MS';
+            font-size: 14px;
+            /*text-align:center;*/
+            padding: 40px 30px 20px 10px;
+        }
+
+        td {
+            padding-bottom:10px;
+        }
+        .td1 {
+            width: 20%;
+        }
+        .td2 {
+            width: 50%;
+        }
+        .td3 {
+            text-align:right;
+        }
+
+        table {
+            width:30%;
+        }
+
+        .td2 input {
+            width: 85%;
+        }
+    </style>
+</head>
+<body onload="oyunlariListele();">
+    <table>
+        <tr>
+            <td colspan="3">
+                <div id="oyunListesi" class="oyunListesi"></div>
+            </td>
+
+        </tr>
+        <tr>
+            <td class="td1">
+                <b>Adı:</b>
+            </td>
+            <td class="td2">
+                <input type="text" placeholder="Oyun adı giriniz..." />
+            </td>
+            <td class="td3">
+                <button onclick="oyunuEsitligeGoreAra()">Oyunu Eşitliğe Göre Ara</button>
+                <button onclick="oyunuIcermeyeGoreAra()">Oyunu İçermeye Göre Ara</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <p class="sonuc">Oyunlar</p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
