@@ -35,22 +35,32 @@ function oyunlariListele() {
     }
 }
 
-function oyunuEsitligeGoreAra() {
+function inputAl() {
     var input = document.getElementsByTagName("input");
     var inputValue = input[0].value;
 
     var output = document.getElementsByClassName("sonuc")[0];
-
-    var outputValue = "";
-    if (inputValue == "") {
-        output.innerText = "Oyun bulunamadı!";
-        return;
-    } 
-
     
 
+    if (inputValue == "") {
+        output.innerText = "Arama değeri girilmelidir!";
+        return "";
+    }
+    return inputValue;
+}
+
+function oyunuEsitligeGoreAra() {
+    var inputValue = inputAl();
+
+    if (inputValue == "") {
+        return;
+    }
+
+    var output = document.getElementsByClassName("sonuc")[0];
+    var outputValue = "";
+
     for (var oyun of oyunlar) {
-        if (oyun == inputValue) {
+        if (oyun.toLocaleUpperCase() == inputValue.toLocaleUpperCase().trim()) {
             outputValue = oyun;
             break;
         }
@@ -66,5 +76,43 @@ function oyunuEsitligeGoreAra() {
 }
 
 function oyunuIcermeyeGoreAra() {
+    var inputValue = inputAl();
+    console.log(inputValue);
 
+    if (inputValue == "") {
+        return;
+    }
+
+    var output = document.getElementsByClassName("sonuc")[0];
+    var outputValue = "";
+    var sonuc = new Array();
+    
+    console.log(oyunlar);
+
+    for (var oyun of oyunlar) {
+        if (oyun.toLocaleLowerCase().includes(inputValue.toLocaleLowerCase().trim())) {
+            console.log(oyun);
+            sonuc.push(oyun);
+        }
+    }
+
+    console.log(sonuc);
+
+    if (sonuc.length > 0) {
+        for (var eleman of sonuc) {
+            outputValue += eleman + ayrac;
+        }
+    }
+
+    output.innerHTML = outputValue == "" ? "Oyun bulunamadı!" : "Bulunan oyunlar: " + outputValue;
+}
+
+function ara() {
+    var esitMiCheckBox = document.getElementById("esitmi");
+    var esitMi = esitMiCheckBox.checked;
+    if (esitMi) {
+        oyunuEsitligeGoreAra();
+    } else {
+        oyunuIcermeyeGoreAra();
+    }
 }
