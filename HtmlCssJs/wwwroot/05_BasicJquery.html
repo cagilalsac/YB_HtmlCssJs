@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Basic jQuery</title>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="05_BasicJquery.js"></script>
+    <script>
+        //$(document).ready(function () {
+        //    alert("Basic jQuery HTML Document Loaded.");
+        //});
+        $(function () {
+            console.log("Basic jQuery HTML Document Loaded.");
+        });
+    </script>
+    <style>
+        .myClass {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="6">
+                <h4>My Header</h4>
+                
+                <!--<h4>Şarkı Bilgileri</h4>
+                <hr />-->
+            </td>
+        </tr>
+        <tr>
+            <td class="myClass">
+                
+            </td>
+            <td>
+                <input type="text" id="tbSarki" placeholder="Şarkı giriniz..." />
+            </td>
+            <td>
+                Sanatçı
+            </td>
+            <td>
+                <select id="ddlSanatci">
+                    <option value="">-- Seçiniz --</option>
+                    <option value="tarkan">Tarkan</option>
+                    <option value="sezen">Sezen Aksu</option>
+                </select>
+                <br />
+                <label class="lSanatci"></label>
+            </td>
+            <td>
+                Türler
+            </td>
+            <td>
+                <select multiple id="ddlTurler">
+                    <option value="p">Pop</option>
+                    <option value="s">Slow</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Yerli Mi?
+            </td>
+            <td>
+                <input type="checkbox" id="cbYerliMi" checked />
+            </td>
+            <td>
+                Dönem
+            </td>
+            <td>
+                <input type="radio" name="dönem" id="rbk80" value="<80" checked />&nbsp;&nbsp;&nbsp;80 öncesi
+                <input type="radio" name="dönem" id="rbb80" value=">80" />&nbsp;&nbsp;&nbsp;80 sonrası
+            </td>
+            <td>
+                Açıklama
+            </td>
+            <td>
+                <textarea rows="3" id="tbAciklama"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <button id="bYazdir">Yazdır</button>
+                &nbsp;
+                <button id="bTemizle">Temizle</button>
+                &nbsp;
+                <a class="link" href="">Need4code</a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <p id="pSarkiBilgileri"></p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
