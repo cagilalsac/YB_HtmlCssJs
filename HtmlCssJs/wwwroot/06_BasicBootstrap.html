@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Basic Bootstrap</title>
+    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <style>
+        .myJumbotron {
+            background-color: yellow !important;
+            color: purple !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <b>Adı</b>
+            </div>
+            <div class="col-md-4">
+                <b>Kurum</b>
+            </div>
+            <div class="col-md-4">
+                <b>Ünvan</b>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                Çağıl Alsaç
+            </div>
+            <div class="col-md-4">
+                Bilkent Üniversitesi
+            </div>
+            <div class="col-md-4">
+                Hoca
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 text-end">
+                <b>Adı</b>
+            </div>
+            <div class="col-4 text-end">
+                <b>Kurum</b>
+            </div>
+            <div class="col-4 text-end">
+                <b>Ünvan</b>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 text-end">
+                Çağıl Alsaç
+            </div>
+            <div class="col-4 text-end">
+                Bilkent Üniversitesi
+            </div>
+            <div class="col-4 text-end">
+                Hoca
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-12">
+                <label class="text-primary">Primary</label>
+                <br />
+                <button class="btn btn-info">Info</button>
+                <br />
+                <a href="https://need4code.com" target="_blank" class="btn btn-warning">Warning</a>
+                <br />
+                <span class="text-success">Success</span>
+                <br />
+                <input type="button" class="btn btn-danger" value="Danger" />
+            </div>
+        </div>
+        <hr />
+        <form action="/home/login" method="post">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="cagil@alsac.com">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input name="password" type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+                <input name="rememberme" type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="reset" class="btn btn-warning">Reset</button>
+        </form>
+        <hr />
+        <p class="mt-4 p-5 bg-primary text-white rounded"
+           style="background-color:yellow !important;color:purple !important;">
+            This is a jumbotron.
+        </p>
+        <p class="mt-4 p-5 bg-primary text-white rounded myJumbotron">
+            This is another jumbotron.
+        </p>
+    </div>
+
+</body>
+</html>

@@ -28,5 +28,24 @@ namespace HtmlCssJs.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        // home/welcome
+        // controller/action
+        public IActionResult Welcome()
+        {
+            return View();
+        }
+
+        // home/isim?ad=çaðýl&soyad=alsaç
+        public IActionResult Isim(string ad, string soyad)
+        {
+            return Content("Ad: " + ad + "Soyad: " + soyad);
+        }
+
+        // home/login
+        public IActionResult Login(string email, string password, string rememberme)
+        {
+            return Content("<label style=\"color:red\">Welcome " + email + "</label>", "text/html");
+        }
     }
 }
